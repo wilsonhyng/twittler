@@ -122,19 +122,19 @@ function getNewTweets(startIndex) {
     if (tweet.user === 'sharksforcheap') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
-      $tweet.appendTo('.row2, my_popup2').hide().fadeIn(1000);
+      $tweet.appendTo('.row2, #my_popup2').hide().fadeIn(1000);
     }
 
     if (tweet.user === 'mracus') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
-      $tweet.appendTo('.row3, my_popup3').hide().fadeIn(1000);
+      $tweet.appendTo('.row3, #my_popup3').hide().fadeIn(1000);
     }
 
     if (tweet.user === 'douglascalhoun') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
-      $tweet.appendTo('.row4, my_popup4').hide().fadeIn(1000);
+      $tweet.appendTo('.row4, #my_popup4').hide().fadeIn(1000);
     }
 
 
