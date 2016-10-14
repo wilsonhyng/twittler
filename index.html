@@ -1,27 +1,101 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="jquery.js"></script>
+    <!-- jQuery Popup Overlay -->
+    <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
     <script src="data_generator.js"></script>
+    <script src="overlay.js"></script>
+    <script src="functionality.js"></script>
+
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
   </head>
   <body>
-    <script>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+    <div class="container">
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+      <div class="twittler col-xs-8">
 
-      });
+        <h1>Twittler</h1>
 
-    </script>
+
+
+      </div>
+
+      <div class="madeByWilson col-xs-4">
+
+        <h2>A project by <br/> Wilson Ng</h2>
+
+      </div>
+
+
+
+
+
+
+      <div class="users row1 col-xs-3">
+        <button class="userName my_popup1_open">@shawndrost</button>
+      </div>
+
+
+                    <!-- copy of row1 for overlay -->
+                          <div class = 'userPopUp row1' id = 'my_popup1'>
+                            <h3>@shawndrost</h3>
+                          </div>
+                    <!-- copy of row1 for overlay -->
+
+
+      <div class="users row2 col-xs-3">
+        <button class="userName my_popup2_open">@sharksforcheap</button>
+      </div>
+
+                    <!-- copy of row2 for overlay -->
+                          <div class = 'userPopUp row2' id = 'my_popup2'>
+                            <h3>@sharksforcheap</h3>
+                          </div>
+                    <!-- copy of row2 for overlay -->
+
+
+      <div class="users row3 col-xs-3">
+        <button class="userName my_popup3_open">@mracus</button>
+      </div>
+
+                    <!-- copy of row3 for overlay -->
+                          <div class = 'userPopUp row3' id = 'my_popup3'>
+                            <h3>@mracus</h3>
+                          </div>
+                    <!-- copy of row3 for overlay -->
+
+
+      <div class="users row4 col-xs-3">
+        <button class="userName my_popup4_open">@douglascalhoun</button>
+      </div>
+
+
+                    <!-- copy of row4 for overlay -->
+                          <div class = 'userPopUp row4' id = 'my_popup4'>
+                            <h3>@douglascalhoun</h3>
+                          </div>
+                    <!-- copy of row4 for overlay -->
+
+
+
+
+    </div>
   </body>
 </html>
