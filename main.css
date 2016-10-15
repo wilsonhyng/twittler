@@ -10,25 +10,27 @@ html body {
   border-radius: 25px;
 }
 
+.sprite {
+  padding-top: 10px;
+}
+
 
 .twittler {
   font-family: 'Amatic SC', cursive;
-  font-size: 4.5em;
-  margin-bottom: 20px;
+  font-size: 8em;
   text-align: center;
-
-
 }
 
 .madeByWilson {
   font-family: 'Amatic SC', cursive;
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 20px;
   text-align: center;
-
+  height: 150px;
+  padding-top: 33px;
 }
 
- button.userName {
+button.userName {
   background:none;
   border:none;
   font-family: 'Raleway', sans-serif;
@@ -43,9 +45,10 @@ button.userName:hover {
 }
 
 .tweet {
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.15em;
   background-color: #FCBD7A;
-
   border-radius: 25px;
   padding: 12px;
   margin-top: 8px;
@@ -57,11 +60,8 @@ button.userName:hover {
   background-color: #FD945D;
 }
 
-
 .userPopUp h3 {
   font-family: 'Raleway', sans-serif;
-  /*color: yellow;*/
-  /*text-align: center;*/
   color: #1DA1F2;
 }
 
@@ -69,9 +69,27 @@ button.userName:hover {
   background-color: #F3EBDE;
   /*border: 5px solid purple;*/
   padding: 40px;
+}
 
-
+#bird {
+   width: 150px;
+   height: 150px;
+   background: transparent url('twitter-bird-sprite.png') 0px 0px no-repeat;
 }
 
 
+
+
+
+
+
+.madeByWilson a:link, a:visited, a:link, a{
+    text-decoration: none;
+    color: black;
+}
+
+.madeByWilson a:hover {
+    text-decoration: none;
+    color: #1DA1F2;
+}
 

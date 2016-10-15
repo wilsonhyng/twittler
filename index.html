@@ -3,33 +3,27 @@
   <head>
     <link rel="stylesheet" type="text/css" href="main.css">
     <script src="jquery.js"></script>
+    <script src="moment.js"></script>
+    <!-- jQuery sprite animation -->
+    <script src="jquery.spriteOnHover-0.2.5/jquery.spriteOnHover-0.2.5.js"></script>
     <!-- jQuery Popup Overlay -->
     <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
     <script src="data_generator.js"></script>
-    <script defer src="overlay.js"></script>
-    <script defer src="functionality.js"></script>
-
-
-
-
-
-
+    <script src="overlay.js"></script>
+    <script src="functionality.js"></script>
+    <!-- <script src="sprite.js"></script> -->
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-
-
   </head>
   <body>
 
@@ -39,24 +33,24 @@
     <div class="container">
 
 
-      <div class="bird col-xs-4">
+      <!-- title bar -->
 
-
+      <div class="sprite col-xs-4">
+        <div class ="center-block" id="bird"></div>
       </div>
 
-
-
       <div class="twittler col-xs-4">
-
         <span>Twittler</span>
-
       </div>
 
       <div class="madeByWilson col-xs-4">
-
-        <h2>a project by <br/> wilson ng</h2>
-
+        <a target="_blank" href="https://github.com/wilsonhyng"><span>a project by <br/> wilson ng</span></a>
       </div>
+
+
+
+      <!-- overlay buttons for each twitter user -->
+
 
       <div class="user1 col-xs-3"><button class="userName my_popup1_open">@shawndrost</button></div>
       <div class="user2 col-xs-3"><button class="userName my_popup2_open">@sharksforcheap</button></div>
@@ -65,7 +59,7 @@
 
 
 
-
+      <!-- separate columns for each twitter user -->
 
 
       <div class="users row1 col-xs-3">
