@@ -69,15 +69,8 @@
 
 $(document).ready(function() {
 
-  // var $body = $('body');
-  // $body.html('');
   var startIndex;
-
   getNewTweets(startIndex);
-
-
-
-
 
 });
 
@@ -96,6 +89,8 @@ function getNewTweets(startIndex) {
   console.log('This is the startIndex: ',startIndex);
   console.log('This is the index: ',index);
 
+  // it will clear each row of tweets and replace with the new ones
+
   $('.row1').empty();
   $('.row2').empty();
   $('.row3').empty();
@@ -104,7 +99,6 @@ function getNewTweets(startIndex) {
 
   while (index >= startIndex) {
     var tweet = streams.home[index];
-    // var $tweet = $('<div></div>');
     var $tweet = $('<div />', {
       'class': 'tweet'
     });
@@ -114,26 +108,26 @@ function getNewTweets(startIndex) {
 
     if (tweet.user === 'shawndrost') {
 
-      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
       $tweet.appendTo('.row1, #my_popup1').hide().fadeIn(1000);
 
     }
 
     if (tweet.user === 'sharksforcheap') {
 
-      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
       $tweet.appendTo('.row2, #my_popup2').hide().fadeIn(1000);
     }
 
     if (tweet.user === 'mracus') {
 
-      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
       $tweet.appendTo('.row3, #my_popup3').hide().fadeIn(1000);
     }
 
     if (tweet.user === 'douglascalhoun') {
 
-      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\ Time: ' + tweet.created_at);
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
       $tweet.appendTo('.row4, #my_popup4').hide().fadeIn(1000);
     }
 
@@ -143,7 +137,7 @@ function getNewTweets(startIndex) {
 
   }
 
-  // var startIndex = streams.home.length;
+  // set the startIndex to the last index
 
   startIndex = streams.home.length;
 
@@ -157,6 +151,6 @@ function getNewTweets(startIndex) {
 
   setTimeout(function() {
     getNewTweets(startIndex)
-  }, 10000)
+  }, 20000)
 
 }
