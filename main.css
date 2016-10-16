@@ -45,7 +45,6 @@ button.userName:hover {
 }
 
 .tweet {
-  /*font-family: 'Roboto', sans-serif;*/
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.15em;
   background-color: #FCBD7A;
@@ -54,6 +53,7 @@ button.userName:hover {
   margin-top: 8px;
   white-space: pre-wrap;
   box-shadow: -4px 3px 5px grey;
+  text-align: center;
 }
 
 .tweet:hover {
@@ -67,7 +67,6 @@ button.userName:hover {
 
 .userPopUp {
   background-color: #F3EBDE;
-  /*border: 5px solid purple;*/
   padding: 40px;
 }
 

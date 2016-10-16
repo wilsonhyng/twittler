@@ -26,8 +26,8 @@ function getNewTweets(startIndex) {
   $('.row4').empty();
 
 
-  while (index >= startIndex) {
-    var tweet = streams.home[index];
+  while (startIndex <= index) {
+    var tweet = streams.home[startIndex];
     var $tweet = $('<div />', {
       'class': 'tweet'
     });
@@ -38,31 +38,31 @@ function getNewTweets(startIndex) {
     if (tweet.user === 'shawndrost') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      // $tweet.html('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
+      $tweet.clone().prependTo('.row1').hide().fadeIn(1500);
+      $tweet.clone().prependTo('#my_popup1');
 
-      $tweet.appendTo('.row1, #my_popup1').hide().fadeIn(1000);
 
     }
 
     if (tweet.user === 'sharksforcheap') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row2, #my_popup2').hide().fadeIn(1000);
+      $tweet.appendTo('.row2, #my_popup2').hide().fadeIn(1500);
     }
 
     if (tweet.user === 'mracus') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row3, #my_popup3').hide().fadeIn(1000);
+      $tweet.appendTo('.row3, #my_popup3').hide().fadeIn(1500);
     }
 
     if (tweet.user === 'douglascalhoun') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row4, #my_popup4').hide().fadeIn(1000);
+      $tweet.appendTo('.row4, #my_popup4').hide().fadeIn(1500);
     }
 
-    index -= 1;
+    startIndex += 1;
 
   }
 
@@ -75,11 +75,14 @@ function getNewTweets(startIndex) {
 
 
 
+
+
+
   // after 20 seconds, run getNewTweets again with the new startIndex
 
   setTimeout(function() {
     getNewTweets(startIndex)
-  }, 20000)
+  }, 5000)
 
 }
 
