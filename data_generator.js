@@ -47,7 +47,7 @@ var generateRandomTweet = function(){
   addTweet(tweet);
 };
 
-for(var i = 0; i < 8; i++){
+for(var i = 0; i < 10; i++){
   generateRandomTweet();
 }
 

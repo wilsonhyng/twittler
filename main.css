@@ -40,7 +40,7 @@ button.userName {
   color: #1DA1F2;
   font-size: 2em;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 button.userName:hover {
@@ -84,6 +84,7 @@ button.userName:hover {
 
 
 .madeByWilson a:link, a:visited, a:link, a{
+    -webkit-transition: color ease-in-out 800ms;
     text-decoration: none;
     color: black;
 }
@@ -93,6 +94,41 @@ button.userName:hover {
     color: #1DA1F2;
 }
 
+.twittler a:link, a:visited, a:link, a{
+    -webkit-transition: color ease-in-out 800ms;
+    text-decoration: none;
+    color: black;
+}
+
+.twittler a:hover {
+    text-decoration: none;
+}
+
+
 #audio {
     display: none;
+}
+
+/*.twittler, .twittler span:hover {
+    -webkit-transition: color ease-in-out 800ms;
+    color: black;
+}
+
+.twittler span:hover {
+    color: #1DA1F2;
+}*/
+
+@-webkit-keyframes blackWhite {
+  0% { color: #1DA1F2; }
+  50% { color: #1DA1F2; }
+  51% { color: black; }
+  100% { color: black; }
+}
+
+.twittler span:hover {
+    height: 100px;
+    color: black;
+    -webkit-animation-name: blackWhite;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 2s;
 }

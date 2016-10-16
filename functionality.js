@@ -2,7 +2,7 @@ $(document).ready(function() {
   var startIndex;
   getNewTweets(startIndex);
 
-  $('#bird').spriteOnHover({fps:20,loop: true,rewind: true,repeat:true});
+  $('#bird').spriteOnHover({fps:15,loop: true,rewind: true,repeat:true});
 
 });
 
