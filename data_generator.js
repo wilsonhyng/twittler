@@ -47,13 +47,13 @@ var generateRandomTweet = function(){
   addTweet(tweet);
 };
 
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 8; i++){
   generateRandomTweet();
 }
 
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 1000);
+  setTimeout(scheduleNextTweet, Math.random() * 1500);
 };
 scheduleNextTweet();
 

@@ -6,8 +6,11 @@ html body {
   background-color: #F3EBDE;
   margin-top: 2%;
   margin-bottom: 2%;
-  padding: 1% 1% 1% 1%;
   border-radius: 25px;
+}
+
+.users {
+  padding-bottom: 35px;
 }
 
 .sprite {
@@ -68,6 +71,7 @@ button.userName:hover {
 .userPopUp {
   background-color: #F3EBDE;
   padding: 40px;
+  border-radius: 25px;
 }
 
 #bird {
@@ -75,9 +79,6 @@ button.userName:hover {
    height: 150px;
    background: transparent url('twitter-bird-sprite.png') 0px 0px no-repeat;
 }
-
-
-
 
 
 
@@ -92,3 +93,6 @@ button.userName:hover {
     color: #1DA1F2;
 }
 
+#audio {
+    display: none;
+}

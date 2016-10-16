@@ -3,6 +3,7 @@ $(document).ready(function() {
   getNewTweets(startIndex);
 
   $('#bird').spriteOnHover({fps:20,loop: true,rewind: true,repeat:true});
+
 });
 
 
@@ -47,19 +48,22 @@ function getNewTweets(startIndex) {
     if (tweet.user === 'sharksforcheap') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row2, #my_popup2').hide().fadeIn(1500);
+      $tweet.clone().prependTo('.row2').hide().fadeIn(1500);
+      $tweet.clone().prependTo('#my_popup2');
     }
 
     if (tweet.user === 'mracus') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row3, #my_popup3').hide().fadeIn(1500);
+      $tweet.clone().prependTo('.row3').hide().fadeIn(1500);
+      $tweet.clone().prependTo('#my_popup3');
     }
 
     if (tweet.user === 'douglascalhoun') {
 
       $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.date_format);
-      $tweet.appendTo('.row4, #my_popup4').hide().fadeIn(1500);
+      $tweet.clone().prependTo('.row4').hide().fadeIn(1500);
+      $tweet.clone().prependTo('#my_popup4');
     }
 
     startIndex += 1;
@@ -74,15 +78,29 @@ function getNewTweets(startIndex) {
 
 
 
+  // tweet hover zoom
+
+  $('.tweet').hoverIntent(
+    function() {
+        $(this).animate({ 'zoom': 1.2 }, 400);
+    },
+    function() {
+        $(this).animate({ 'zoom': 1 }, 400);
+    });
 
 
 
 
-  // after 20 seconds, run getNewTweets again with the new startIndex
+
+
+
+  // after x seconds, run getNewTweets again with the new startIndex WITH an alert sound
+  var audio = document.getElementById('audio');
 
   setTimeout(function() {
-    getNewTweets(startIndex)
-  }, 5000)
+    getNewTweets(startIndex);
+    audio.play();
+  }, 40000)
 
 }
 
